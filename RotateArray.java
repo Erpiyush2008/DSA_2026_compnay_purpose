@@ -11,7 +11,7 @@ import java.util.Arrays;
 
         for (int i = 0; i < n; i++) {
 
-            result[(i + k) % n] = nums[i];
+            result[(i +k) % n] = nums[i];
 
         }
 
