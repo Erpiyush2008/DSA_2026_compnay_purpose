@@ -1,3 +1,8 @@
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+
 public class BinarayTree {
     static class Node{
       int data;
@@ -46,6 +51,38 @@ public class BinarayTree {
           InOderTravrse(root.right);    
  }
 
+    public static void LevealOderTravrse(Node root){
+        if(root==null){
+            return;
+        }
+  Queue<Node> q= new LinkedList<>();
+  q.add(root);
+  q.add(null);
+
+  while(!q.isEmpty()){
+    Node currNode=q.remove();
+    if(currNode==null){
+        System.out.println();
+    
+    if(q.isEmpty()){
+        break;
+    }
+    else{
+        q.add(null);
+    }
+}
+    else{
+        System.out.println( currNode.data+"");
+      if(currNode.left !=null){
+        q.add(currNode.left);
+
+      }
+      if(currNode.right !=null){
+        q.add(currNode.right);
+      }
+    }
+  }
+    }
      
 
      public static void PostOderTravrse(Node root){
@@ -77,6 +114,11 @@ public class BinarayTree {
                System.out.println("Postoder traver");
  tree.PostOderTravrse(root);
 
+
+
+ System.out.println("Leval Oder travese");
+
+ tree.LevealOderTravrse(root);
     //   System.out.println(root.data);
 
   }
