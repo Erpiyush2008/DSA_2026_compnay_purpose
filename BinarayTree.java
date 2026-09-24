@@ -51,6 +51,7 @@ public class BinarayTree {
           InOderTravrse(root.right);    
  }
 
+
     public static void LevealOderTravrse(Node root){
         if(root==null){
             return;
@@ -73,6 +74,8 @@ public class BinarayTree {
 }
     else{
         System.out.println( currNode.data+"");
+        
+
       if(currNode.left !=null){
         q.add(currNode.left);
 
@@ -81,6 +84,7 @@ public class BinarayTree {
         q.add(currNode.right);
       }
     }
+
   }
     }
      
